@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analysis Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Data Analysis Tool</h1>
+        <div>
+            <label for="dataInput">Enter Quantitative Data (comma-separated):</label>
+            <input type="text" id="dataInput" placeholder="e.g., 10, 20, 30">
+            <button onclick="analyzeData()">Analyze</button>
+        </div>
+        <div class="spss-output">
+            <div class="result-chart">
+                <canvas id="myChart" width="400" height="200"></canvas>
+            </div>
+            <div class="result-table">
+                <table id="dataTable">
+                    <thead>
+                        <tr>
+                            <th>Statistic</th>
+                            <th>Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Sum</td>
+                            <td id="sum"></td>
+                        </tr>
+                        <tr>
+                            <td>Mean</td>
+                            <td id="mean"></td>
+                        </tr>
+                        <tr>
+                            <td>Minimum</td>
+                            <td id="min"></td>
+                        </tr>
+                        <tr>
+                            <td>Maximum</td>
+                            <td id="max"></td>
+                        </tr>
+                        <tr>
+                            <td>Range</td>
+                            <td id="range"></td>
+                        </tr>
+                        <tr>
+                            <td>Median</td>
+                            <td id="median"></td>
+                        </tr>
+                        <tr>
+                            <td>Variance</td>
+                            <td id="variance"></td>
+                        </tr>
+                        <tr>
+                            <td>Standard Deviation</td>
+                            <td id="stdDev"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-statistics/7.0.0/simple-statistics.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
